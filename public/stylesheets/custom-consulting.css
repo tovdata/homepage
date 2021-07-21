@@ -1,0 +1,329 @@
+.tov-component {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.tov-component > .icon {
+  background-color: #FFFFFF;
+  border-radius: 100%;
+  box-shadow: 0 3px 3px rgba(129, 140, 248, 0.32), 0 6px 6px rgba(129, 140, 248, 0.12);
+  cursor: pointer;
+  height: 10rem;
+  margin-bottom: 1.5rem;
+  padding: 28%;
+  transition: transform 0.36s;
+  width: 10rem;
+}
+.tov-component > .icon:hover {
+  transform: translateY(-0.625rem);
+}
+.tov-component > .icon > img {
+  height: 100%;
+  width: 100%;
+}
+.tov-component > .description {
+  color: #274F9D;
+  font-family: 'GmarketSans', sans-serif;
+}
+.tov-diff-content {
+  margin-left: 6.25rem;
+}
+.tov-diff-content > .description {
+  font-family: 'SpoqaHanSansNeo', sans-serif;
+  font-size: 1.375rem;
+}
+.tov-diff-form {
+  align-items: center;
+  display: flex;
+}
+.tov-diff-header {
+  min-width: 19.375rem;
+  position: relative;
+  text-align: center;
+}
+.tov-diff-line {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+}
+.tov-diff-line > hr {
+  border-left: 2px dashed rgba(129,140,248,1);
+  height: 3rem;
+}
+.tov-diff-header > .title {
+  background-color: #FFFFFF;
+  border-radius: 0.625rem;
+  color: #274F9D;
+  display: inline-block;
+  font-family: 'GmarketSans', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 0.75rem 4.375rem;
+  width: 100%;
+}
+.tov-program {
+  background-color: #FFFFFF;
+  border-radius: 0.875rem;
+  box-shadow: 0px 0px 27px 0px #D3E0FB;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.875rem 3rem;
+  width: 100%;
+}
+.tov-program > .btn-more {
+  border: 1px solid #274F9D;
+  border-radius: 0.5rem;
+  color: #274F9D;
+  cursor: pointer;
+  display: block;
+  font-size: 1.125rem;
+  margin-top: auto;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  width: 100%;
+}
+.tov-program > .title {
+  color: #274F9D;
+  font-family: 'GmarketSans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.tov-program-row {
+  display: flex;
+  margin-bottom: 1.75rem;
+}
+.tov-program-row:last-child {
+  margin-bottom: 0;
+}
+.tov-program-row > .content {
+  display: block;
+  flex: 1;
+  font-family: 'SpoqaHanSansNeo', sans-serif;
+  position: relative;
+}
+.tov-program-row > .content > .description{
+  color: #8F8F8F;
+  display: block;
+  font-size: 0.875rem;
+  text-align: left;
+  width: 100%;
+}
+.tov-program-row > .content > .subject{
+  color: #333333;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.125rem;
+  text-align: left;
+  width: 100%;
+}
+.tov-program-row > .icon {
+  height: 1rem;
+  margin-right: 0.625rem;
+  margin-top: 0.125rem;
+  width: 1rem;
+}
+.tov-component > .icon > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+@media (max-width: 1280px) {
+  .tov-diff-content {
+    margin-left: 3rem;
+  }
+  .tov-diff-content > .description {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 1024px) {
+  .tov-diff-content {
+    margin-left: 0;
+  }
+  .tov-diff-content > .description {
+    font-size: 1.375rem;
+    text-align: center;
+  }
+  .tov-diff-form {
+    flex-direction: column;
+  }
+  .tov-diff-header {
+    margin-bottom: 2.375rem;
+  }
+  .tov-diff-line {
+    display: none;
+  }
+  .tov-program > .title {
+    font-size: 1.375rem;
+  }
+  .tov-program-row > .content > .description{
+    font-size: 0.75rem;
+  }
+  .tov-program-row > .content > .subject{
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 768px) {
+  .tov-component > .icon {
+    height: 8.875rem;
+    padding: 26%;
+    width: 8.875rem;
+  }
+  .tov-component > .description {
+    font-size: 1.25rem;
+  }
+  .tov-diff-content > .description {
+    font-size: 1.25rem;
+  }
+  .tov-diff-header > .title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 526px) {
+  .tov-component > .icon {
+    height: 7.25rem;
+    margin-bottom: 1.375rem;
+    width: 7.25rem;
+  }
+  .tov-component > .description {
+    font-size: 1rem;
+  }
+  .tov-diff-content > .description {
+    font-size: 1.125rem;
+  }
+  .tov-diff-header {
+    margin-bottom: 2rem;
+  }
+  .tov-diff-header > .title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Modal */
+.modal-background {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.66);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2021;
+}
+.modal-background.hidden {
+  display: none !important;
+}
+.modal {
+  border-radius: 0.875rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.88);
+  width: 43rem;
+}
+.modal-body {
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 0.875rem;
+  border-bottom-right-radius: 0.875rem;
+  padding: 3.375rem 4.75rem;
+}
+.modal-body > .subject {
+  color: #274F9D;
+  font-family: 'SpoqaHanSansNeo', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2.25rem;
+  text-align: left;
+}
+.modal-body > .content-row {
+  display: flex;
+  margin-bottom: 0.625rem;
+}
+.modal-body > .content-row:last-child {
+  margin-bottom: 0;
+}
+.modal-body > .content-row > .icon {
+  height: 1rem;
+  margin-right: 1.25rem;
+  margin-top: 0.25rem;
+  width: 1rem;
+}
+.modal-body > .content-row > p {
+  color: #6F6F6F;
+  flex: 1;
+  font-family: 'SpoqaHanSansNeo', sans-serif;
+  font-size: 1.125rem;
+}
+.modal-header {
+  align-items: center;
+  color: #274F9D;
+  background-color: #F5F8FD;
+  border-top-left-radius: 0.875rem;
+  border-top-right-radius: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 3.375rem;
+  padding-top: 3.375rem;
+  position: relative;
+}
+.modal-header > .close {
+  cursor: pointer;
+  height: 1rem;
+  position: absolute;
+  right: 2.25rem;
+  top: 2rem;
+  width: 1rem;
+}
+.modal-header > .icon {
+  height: 3rem;
+  margin-bottom: 0.625rem;
+  position: relative;
+  width: 3rem;
+}
+.modal-header > .icon > img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+.modal-header > .title {
+  font-family: 'GmarketSans', sans-serif;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .modal-background {
+    padding: 3.875rem;
+  }
+  .modal-body {
+    padding: 2.375rem 3rem
+  }
+  .modal-body > .subject {
+    font-size: 1.25rem;
+  }
+  .modal-body > .content-row > p {
+    font-size: 0.875rem;
+  }
+  .modal-body > .content-row > .icon {
+    height: 0.875rem;
+    margin-right: 1rem;
+    margin-top: 0.125rem;
+    width: 0.875rem;
+  }
+  .modal-header {
+    padding-bottom: 2.75rem;
+    padding-top: 2.75rem;
+  }
+  .modal-header > .close {
+    height: 0.875rem;
+    right: 2rem;
+    top: 1.875rem;
+    width: 0.875rem;
+  }
+  .modal-header > .title {
+    font-size: 1.25rem;
+  }
+}

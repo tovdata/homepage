@@ -3,238 +3,334 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="images/thumbnail.jpg">
     <title>TOVDATA</title>
+    <link rel="icon" href="icons/favicon.svg">
 
-    <!-- Font CSS -->
+    <!-- Font style -->
     <link rel="stylesheet" href="stylesheets/font.css">
+    <!-- Nav style -->
+    <link rel="stylesheet" href="stylesheets/nav.css">
+    <!-- Footer style -->
+    <link rel="stylesheet" href="stylesheets/footer.css">
+    <!-- Color style -->
+    <link rel="stylesheet" href="stylesheets/color.css">
+    <!-- Global style -->
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <!-- Consulting page style -->
+    <link rel="stylesheet" href="stylesheets/custom-consulting.css">
     <!-- Tailwindcss 2.0.3 -->
     <link rel="stylesheet" href="stylesheets/tailwind.min.css">
-    <!-- Font Awesome 5.10.0 -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="stylesheets/animate.min.css">
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="stylesheets/global.css">
-    <!-- Custom -->
-    <style>
-      .tov-consulting-component-icon {
-        cursor: pointer;
-        transition: all 0.3s;
-      }
-      .tov-consulting-component-icon:hover {
-        transform: translateY(-1rem);
-      }
-    </style>
   </head>
   <body>
-    <!-- Navbar -->
+    <!-- Nav -->
     <%- include('./common/nav') %>
-    <!-- Page body -->
+    <!-- Page section -->
     <section>
-      <!-- Hero -->
-      <article class="hero-section">
-        <div class="bg-cover bg-right hero-container" style="background-image: url(/images/hero/consulting.png);">
-          <div class="container mx-auto tov-px-default">
-            <div class="hero">
-              <div class="hero-content">
-                <h5 class="text-lg text-white tov-font-en mb-3">Consulting</h1>
-                <h1 class="font-bold md:text-5xl text-4xl text-white tov-font-kr tov-line-height">기업이 올바르고 안전하게<br/>고객의 개인정보를 활용할 수 있도록</p>
-              </div>
-            </div>
+      <article class="tov-hero" style="background-image: url('/images/hero/consulting.png');">
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-hero-content">
+            <h5 class="tov-font-en sub-title">Consulting</h5>
+            <h1 class="tov-font-kr title">기업이 올바르고 안전하게<br>고객의 개인정보를 활용할 수 있도록</h1>
           </div>
         </div>
       </article>
-      <!-- Page content -->
       <article class="tov-section">
-        <div class="container mx-auto">
-          <div class="tov-container">
-            <img class="mb-26 w-full" src="/images/consulting/question.png">
-            <h3 class="font-bold md:text-3xl text-2xl text-center tov-font-kr tov-font-blue-2">기업들이 겪고 있는 어렵고, 애매한 질문들을 토브데이터가 함께 고민해드립니다</h3>
-          </div>
-        </div>
-      </article>
-      <article class="tov-section tov-bg-blue-5">
-        <div class="container mx-auto">
-          <div class="tov-container">
-            <div class="tov-container-header">
-              <h2 class="mb-8.5 text-4xl font-bold tov-font-kr tov-font-gray-2 tov-line-height">토브데이터의 컨설팅은 이렇게 다릅니다</h2>
-            </div>
-            <div class="tov-container-row mb-18 md:mb-22">
-              <div class="flex flex-col md:flex-row items-center">
-                <div class="md:mb-0 mb-7.5 text-center relative" style="min-width: 310px;">
-                  <div class="bg-white rounded-lg px-18 py-3 inline-block">
-                    <h3 class="font-bold md:text-3xl text-2xl tov-font-blue-3 tov-font-en" style="word-break: keep-all;">Archiving</h3>
-                  </div>
-                  <div class="absolute hidden justify-center md:flex w-full" style="top: 80px;">
-                    <div class="border-dashed border-l-2 border-indigo-400 h-12"></div>
-                  </div>
-                </div>
-                <div class="ml-0 md:ml-24">
-                  <p class="lg:text-2xl text-xl tov-font-kr tov-line-height">단순히 법에서의 요구사항을 전달하는 것이 아닌, 기업의 입장에서 개인정보를 보다 적극적으로 활용할 수 있도록!</p>
-                </div>
-              </div>
-            </div>
-            <div class="tov-container-row mb-18 md:mb-22">
-              <div class="flex flex-col md:flex-row items-center">
-                <div class="md:mb-0 mb-7.5 text-center relative" style="min-width: 310px;">
-                  <div class="bg-white rounded-lg px-18 py-3 inline-block">
-                    <h3 class="font-bold md:text-3xl text-2xl tov-font-blue-3 tov-font-en" style="word-break: keep-all;">Behaving</h3>
-                  </div>
-                  <div class="absolute hidden justify-center md:flex w-full" style="top: 80px;">
-                    <div class="border-dashed border-l-2 border-indigo-400 h-12"></div>
-                  </div>
-                </div>
-                <div class="ml-0 md:ml-24">
-                  <p class="lg:text-2xl text-xl tov-font-kr tov-line-height">현재 기업의 시스템과 동떨어진 형태의 문서로 존재하는 것이 아닌, 기업의 모든 관련부서가 정책을 이해하고, 행동으로 옮길 수 있도록!</p>
-                </div>
-              </div>
-            </div>
-            <div class="tov-container-row">
-              <div class="flex flex-col md:flex-row items-center">
-                <div class="md:mb-0 mb-7.5 text-center" style="min-width: 310px;">
-                  <div class="bg-white rounded-lg px-18 py-3 inline-block">
-                    <h3 class="font-bold md:text-3xl text-2xl tov-font-blue-3 tov-font-en" style="word-break: keep-all;">Caring</h3>
-                  </div>
-                </div>
-                <div class="ml-0 md:ml-24">
-                  <p class="lg:text-2xl text-xl tov-font-kr tov-line-height">일회성으로 끝나는 컨설팅이 아닌, 개인정보 관련 환경 변화에 빠르게 대응 가능하도록! 개인정보 활용의 든든한 비즈니스 파트너가 되어드리겠습니다</p>
-                </div>
-              </div>
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="">
+              <img src="images/consulting/question.png">
             </div>
           </div>
         </div>
       </article>
-      <article class="tov-section tov-bg-blue-5">
-        <div class="container mx-auto">
-          <div class="tov-container tov-container-pb">
-            <div class="tov-container-header">
-              <h5 class="mb-1 text-lg tov-font-en tov-font-blue-3 tov-line-height">Consulting components</h5>
-              <h2 class="mb-8.5 text-4xl font-bold tov-font-kr tov-font-gray-2 tov-line-height">토브데이터의 컨설팅 구성</h2>
-              <hr class="border-b tov-border-blue-4 w-44">
+      <article class="tov-section" style="background-color: #F5F8FD;">
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="tov-form-header">
+              <h1 class="title">토브데이터의 컨설팅은 이렇게 다릅니다</h1>
             </div>
-            <div class="tov-container-row">
-              <div class="flex flex-1 justify-between xl:px-50 md:px-25 px-0">
-                <div class="tov-consulting-component">
-                  <div class="bg-white tov-consulting-component-icon rounded-full md:w-36 md:h-36 md:p-9 sm:w-32 sm:h-32 sm:p-8 w-24 h-24 p-6">
+            <div class="tov-form-row flex-col">
+              <div class="mb-20 tov-diff-form">
+                <div class="tov-diff-header">
+                  <h3 class="title">Archiving</h3>
+                  <div class="tov-diff-line"><hr></div>
+                </div>
+                <div class="tov-diff-content">
+                  <p class="description">단순히 법에서의 요구사항을 전달하는 것이 아닌, 기업의 입장에서 개인정보를 보다 적극적으로 활용할 수 있도록!</p>
+                </div>
+              </div>
+              <div class="mb-20 tov-diff-form">
+                <div class="tov-diff-header">
+                  <h3 class="title">Behaving</h3>
+                  <div class="tov-diff-line"><hr></div>
+                </div>
+                <div class="tov-diff-content">
+                  <p class="description">현재 기업의 시스템과 동떨어진 형태의 문서로 존재하는 것이 아닌, 기업의 모든 관련부서가 정책을 이해하고, 행동으로 옮길 수 있도록!</p>
+                </div>
+              </div>
+              <div class="tov-diff-form">
+                <div class="tov-diff-header">
+                  <h3 class="title">Caring</h3>
+                </div>
+                <div class="tov-diff-content">
+                  <p class="description">일회성으로 끝나는 컨설팅이 아닌, 개인정보 관련 환경 변화에 빠르게 대응 가능하도록! 개인정보 활용의 든든한 비즈니스 파트너가 되어드리겠습니다</p>
+                </div>
+              </div>
+            </div>
+            <div class="tov-form-header tov-form-row-pt">
+              <h1 class="title">토브데이터의 컨설팅은 이렇게 구성됩니다</h1>
+            </div>
+            <div class="tov-form-row tov-card-form">
+              <div class="tov-card-lg">
+                <div class="tov-component">
+                  <div class="icon" onclick="showModal('education')">
                     <img src="/icons/consulting/dark-education.svg">
                   </div>
-                  <p class="mt-4 text-center text-lg tov-font-blue-3 tov-font-en">Education</p>
+                  <p class="description">Education</p>
                 </div>
-                <div class="tov-consulting-component">
-                  <div class="bg-white tov-consulting-component-icon rounded-full md:w-36 md:h-36 md:p-9 sm:w-32 sm:h-32 sm:p-8 w-24 h-24 p-6">
+              </div>
+              <div class="tov-card-lg">
+                <div class="tov-component">
+                  <div class="icon" onclick="showModal('documentation')">
                     <img src="/icons/consulting/dark-documentation.svg">
                   </div>
-                  <p class="mt-4 text-center text-lg tov-font-blue-3 tov-font-en">Documentaion</p>
+                  <p class="description">Documentation</p>
                 </div>
-                <div class="tov-consulting-component">
-                  <div class="bg-white tov-consulting-component-icon rounded-full md:w-36 md:h-36 md:p-9 sm:w-32 sm:h-32 sm:p-8 w-24 h-24 p-6">
+              </div>
+              <div class="tov-card-lg">
+                <div class="tov-component">
+                  <div class="icon" onclick="showModal('expert')">
                     <img src="/icons/consulting/dark-expert.svg">
                   </div>
-                  <p class="mt-4 text-center text-lg tov-font-blue-3 tov-font-en">Export Opinion</p>
+                  <p class="description">Expert Opinion</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </article>
       <article class="tov-section">
-        <div class="container mx-auto">
-          <div class="tov-container">
-            <div class="tov-container-header">
-              <h5 class="mb-1 text-lg tov-font-en tov-font-blue-3 tov-line-height">Consulting Program</h5>
-              <h2 class="mb-8.5 text-4xl font-bold tov-font-kr tov-font-gray-2 tov-line-height">맞춤형 컨설팅 프로그램</h2>
-              <hr class="border-b tov-border-blue-4 w-44">
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="tov-form-header">
+              <h5 class="title-point">Consulting Program</h5>
+              <h1 class="title">맞춤형 컨설팅 프로그램</h1>
+              <hr class="line">
             </div>
-            <div class="tov-container-row">
-              <div class="grid grid-cols-3 gap-x-13 gap-y-8">
-                <div class="col-span-3 lg:col-span-1">
-                  <div class="flex flex-col h-full tov-shadow tov-card rounded-xl px-10 py-11 relative">
-                    <h5 class="font-bold mb-8 md:text-2xl text-xl text-center tov-font-blue-3 tov-font-en tov-line-height">Start-up Program</h5>
-                    <div class="mb-6.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보보호 기본 교육</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보 및 개인정보보호법 관련 기본 교육</small>
-                    </div>
-                    <div class="mb-6.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보처리방침 템플릿 제공 및 검토</p>
-                    </div>
-                    <div class="mb-9.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보 관리 자문 및 상담 (1h)</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보관리 및 이용 현황 진단</small>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">자문 및 상담(Q&A)</small>
-                    </div>
-                    <div class="tov-card-row mt-auto">
-                      <button class="border border-blue-600 rounded-md text-lg tov-font-blue-3 tov-font-kr px-8 py-1 w-full">상담 신청</button>
+            <div class="tov-form-row tov-card-form">
+              <div class="tov-card-lg exi">
+                <div class="tov-program">
+                  <h2 class="title">Start-up Program</h2>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보보호 기본 교육</p>
+                      <small class="description">개인정보 및 개인정보보호법 관련 기본 교육</small>
                     </div>
                   </div>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보처리방침 템플릿 제공 및 검토</p>
+                    </div>
+                  </div>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보 관리 자문 및 상담 (1h)</p>
+                      <small class="description">개인정보관리 및 이용 현황 진단</small>
+                      <small class="description">자문 및 상담(Q&A)</small>
+                    </div>
+                  </div>
+                  <a class="btn-more">상담 신청</a>
                 </div>
-                <div class="col-span-3 lg:col-span-1">
-                  <div class="flex flex-col h-full tov-shadow tov-card rounded-xl px-10 py-11">
-                    <h5 class="font-bold mb-8 md:text-2xl text-xl text-center tov-font-blue-3 tov-font-en tov-line-height">Value-up Program</h5>
-                    <div class="mb-6.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보보호 기본 교육</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보 및 개인정보보호법 관련 기본 교육</small>
-                    </div>
-                    <div class="mb-6.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보보호 심화 교육</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보보호법 및 안전성 확보조치 관련 심화 교육</small>
-                    </div>
-                    <div class="mb-6.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보처리방침 작성 및 제공</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보 관리 및 이용 현황</small>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">진단을 기반으로 한 개인정보처리방침 작성 및 문서 제공</small>
-                    </div>
-                    <div class="mb-9.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보 관리 자문 및 상담 (2h)</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보관리 및 이용 현황 진단</small>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">자문 및 상담(Q&A)</small>
-                    </div>
-                    <div class="tov-card-row mt-auto">
-                      <button class="border border-blue-600 rounded-md text-lg tov-font-blue-3 tov-font-kr px-8 py-1 w-full">상담 신청</button>
+              </div>
+              <div class="tov-card-lg exi">
+                <div class="tov-program">
+                  <h2 class="title">Value-up Program</h2>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보보호 기본 교육</p>
+                      <small class="description">개인정보 및 개인정보보호법 관련 기본 교육</small>
                     </div>
                   </div>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보보호 심화 교육</p>
+                      <small class="description">개인정보보호법 및 안전성 확보조치 관련 심화 교육</small>
+                    </div>
+                  </div>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보처리방침 작성 및 제공</p>
+                      <small class="description">개인정보 관리 및 이용 현황 진단을 기반으로 한 개인정보처리방침 작성 및 문서 제공</small>
+                    </div>
+                  </div>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보 관리 자문 및 상담 (2h)</p>
+                      <small class="description">개인정보관리 및 이용 현황 진단</small>
+                      <small class="description">자문 및 상담(Q&A)</small>
+                    </div>
+                  </div>
+                  <a class="btn-more">상담 신청</a>
                 </div>
-                <div class="col-span-3 lg:col-span-1">
-                  <div class="flex flex-col h-full tov-shadow tov-card rounded-xl px-10 py-11">
-                    <h5 class="font-bold mb-8 md:text-2xl text-xl text-center tov-font-blue-3 tov-font-en tov-line-height">Partner Program</h5>
-                    <div class="mb-6.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보보호 Q&A Desk 운영</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보 관련 이슈 발생 시 상담 및 자문</small>
-                    </div>
-                    <div class="mb-6.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보보호 정기 교육</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보보호 책임자 및 취급자 대상 개인정보보호 정기 의무 교육 실시</small>
-                    </div>
-                    <div class="mb-9.5 tov-card-row">
-                      <p class="font-bold mb-1.5 text-base tov-font-gray-2 tov-font-kr tov-line-height"><i class="fa fa-check mr-2 tov-font-gray-4"></i>개인정보보호 종합 컨설팅</p>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">안전한 개인정보의 이용 및 관리 교육</small>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">각종 개인정보 관련 문서 작성</small>
-                      <small class="block ml-6 text-xs tov-font-gray-3 tov-font-kr tov-line-height">개인정보처리시스템 운영에 관한 기술적・관리적 자문 및 상담 제공</small>
-                    </div>
-                    <div class="tov-card-row mt-auto">
-                      <button class="border border-blue-600 rounded-md text-lg tov-font-blue-3 tov-font-kr px-8 py-1 w-full">상담 신청</button>
+              </div>
+              <div class="tov-card-lg exi">
+                <div class="tov-program">
+                  <h2 class="title">Partner Program</h2>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보보호 Q&A Desk 운영</p>
+                      <small class="description">개인정보 관련 이슈 발생 시 상담 및 자문</small>
                     </div>
                   </div>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보처리방침 템플릿 제공 및 검토</p>
+                      <small class="description">개인정보보호 책임자 및 취급자 대상 개인정보보호 정기 의무 교육 실시</small>
+                    </div>
+                  </div>
+                  <div class="tov-program-row">
+                    <span class="icon"><img src="images/consulting/check.png"></span>
+                    <div class="content">
+                      <p class="subject">개인정보보호 종합 컨설팅</p>
+                      <small class="description">안전한 개인정보의 이용 및 관리 교육</small>
+                      <small class="description">각종 개인정보 관련 문서 작성</small>
+                      <small class="description">개인정보처리시스템 운영에 관한 기술적・관리적 자문 및 상담 제공</small>
+                    </div>
+                  </div>
+                  <a class="btn-more">상담 신청</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </article>
-
-      <article class="modal-section">
-        <div class="modal-background"></div>
+      <!-- Modal -->
+      <article class="modal-background hidden">
+        <!-- Modal (education) -->
+        <div class="modal hidden" data-type="education">
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()"><img src="icons/consulting/dark-cancel.svg"></span>
+            <span class="icon"><img src="icons/consulting/dark-education.svg"></span>
+            <div class="title">Education</div>
+          </div>
+          <div class="modal-body">
+            <h5 class="subject">개인정보 보호 및 활용의 기초부터 안전성 확보조치를 위한 심화교육까지!</h5>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p>개인정보 보호 및 활용에 대한 기초 교육</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p>국내 개인정보보호법 및 안전성 확보조치 등에 대한 심화 교육</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p>EU GDPR 에 대한 기초 교육</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p>EU GDPR의 준수를 위한 세부 사항에 대한 심화 교육</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p>기업별로 필요한 내용으로 구성한 맞춤형 교육</p>
+            </div>
+          </div>
+        </div>
+        <!-- Modal (documentation) -->
+        <div class="modal hidden" data-type="documentation">
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()"><img src="icons/consulting/dark-cancel.svg"></span>
+            <span class="icon"><img src="icons/consulting/dark-documentation.svg"></span>
+            <div class="title">Documentation</div>
+          </div>
+          <div class="modal-body">
+            <h5 class="subject">개인정보를 다루는 기업이 갖춰야 하는 복잡한 문서작업을 한번에!</h5>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p><b>개인정보처리방침</b> : 템플릿 제공/검토 및 자문/작성</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p><b>개인정보 수집 및 이용 동의서</b> : 템플릿 제공/검토 및 자문/작성</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p><b>내부관리계획</b> : 템플릿 제공/검토 및 자문/작성</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p><b>개인정보보호 교육 계획(안)</b> : 템플릿 제공/검토 및 자문/작성</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p><b>개인정보 처리 위수탁 계약</b> : 템플릿 제공/검토 및 자문</p>
+            </div>
+          </div>
+        </div>
+        <!-- Modal (export) -->
+        <div class="modal hidden" data-type="expert">
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()"><img src="icons/consulting/dark-cancel.svg"></span>
+            <span class="icon"><img src="icons/consulting/dark-expert.svg"></span>
+            <div class="title">Expert Opinion</div>
+          </div>
+          <div class="modal-body">
+            <h5 class="subject">어디에 물어봐야 할지 모르는 헷갈리고 어려운 고민들을 속시원하게!</h5>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p>사업 또는 영업활동과 관련하여 국내에서 발생되는 개인정보 관리에 관한 상담 및 의견 제시</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p>개인정보처리시스템의 구성과 운영에 관한 기술적 검토 및 의견 제시</p>
+            </div>
+            <div class="content-row">
+              <span class="icon"><img src="images/consulting/circle.png"></span>
+              <p>기업의 상황에 따른 개인정보의 보호와 활용 및 관리에 관한 맞춤형 자문</p>
+            </div>
+          </div>
+        </div>
       </article>
 
       <!-- Footer -->
-      <%- include('./common/footer') %>
+      <%- include('./common/footer')%>
     </section>
 
     <!-- Animate JS -->
     <script type="text/javascript" src="javascripts/animate.js"></script>
-    <!-- Nav event JS -->
-    <script type="text/javascript" src="javascripts/nav.js"></script>
+    <!-- Script -->
     <script>
+      // Current modal type
+      let currentModalType = 'documentation';
 
+      // Show modal
+      function showModal(type) {
+        // Set current modal type
+        currentModalType = type;
+        // Set modal UI
+        document.querySelector(`.modal[data-type="${type}"]`).classList.remove('hidden');
+        document.querySelector('.modal-background').classList.remove('hidden');
+        document.querySelector('body').classList.add('overflow-y-hidden');
+      }
+
+      // Close modal
+      function closeModal() {
+        document.querySelector(`.modal[data-type="${currentModalType}"]`).classList.add('hidden');
+        document.querySelector('.modal-background').classList.add('hidden');
+        document.querySelector('.modal-background').classList.add('hidden');
+        document.querySelector('body').classList.remove('overflow-y-hidden');
+      }
     </script>
   </body>
 </html>

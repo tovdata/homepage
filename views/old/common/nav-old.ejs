@@ -1,0 +1,31 @@
+<!-- Navbar (top) -->
+<nav class="absolute left-0 text-white top-0 w-full z-50">
+  <div class="container mx-auto nav-bar tov-px-default">
+    <div class="brand-logo logo-top">
+      <a href="/"><img src="/images/light-logo.png"></a>
+    </div>
+    <div class="hidden md:inline-block nav-menu-top">
+      <div class="nav-list">
+        <a class="cursor-pointer nav-item tov-font-en tov-line-height lg:text-sm text-xs" href="/privacydam">PrivacyDAM</a>
+        <a class="cursor-pointer nav-item tov-font-en tov-line-height lg:text-sm text-xs" href="/consulting">Consulting</a>
+        <a class="cursor-pointer go-blog nav-item tov-font-en tov-line-height lg:text-sm text-xs">Blog</a>
+        <a class="cursor-pointer nav-item tov-font-en tov-line-height lg:text-sm text-xs" href="/company">Company</a>
+        <a class="cursor-pointer go-contact nav-item tov-font-en tov-line-height lg:text-sm text-xs">Contact</a>
+      </div>
+    </div>
+    <span class="inline-block md:hidden nav-menu-icon w-6" onclick="showMenu()"><img src="/icons/light-menu.png"></span>
+  </div>
+</nav>
+<!-- Navbar (side) -->
+<div class="hidden" id="nav-menu-side">
+  <div class="flex justify-end pr-8 pt-7 w-full">
+    <span class="cursor-pointer" onclick="hiddenMenu()"><i class="fas fa-times"></i></span>
+  </div>
+  <div class="nav-list">
+    <a class="cursor-pointer nav-item tov-font-en text-lg" href="/privacydam">PrivacyDAM</a>
+    <a class="cursor-pointer nav-item tov-font-en text-lg" href="/consulting">Consulting</a>
+    <a class="cursor-pointer go-blog nav-item tov-font-en text-lg">Blog</a>
+    <a class="cursor-pointer nav-item tov-font-en text-lg" href="/company">Company</a>
+    <a class="cursor-pointer gp-contact nav-item tov-font-en text-lg">Contact</a>
+  </div>
+</div>

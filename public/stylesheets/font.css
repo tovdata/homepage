@@ -14,19 +14,12 @@
   src: url('../fonts/GmarketSans/GmarketSansBold.woff');
   font-weight: 700;
 }
-/* NotoSansKR fonts */
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('../fonts/NotoSansKR/NotoSansKR-Light.woff');
-  font-weight: 100;
+/* Spoqa Han Sans Neo fonts */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+/* Font class */
+.tov-font-en {
+  font-family: 'GmarketSans';
 }
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('../fonts/NotoSansKR/NotoSansKR-Regular.woff');
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('../fonts/NotoSansKR/NotoSansKR-Bold.woff');
-  font-weight: 700;
+.tov-font-kr {
+  font-family: 'SpoqaHanSansNeo';
 }

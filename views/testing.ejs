@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="og:image" content="images/thumbnail.jpg">
     <title>TOVDATA</title>
     <link rel="icon" href="icons/favicon.svg">
 
@@ -24,6 +23,13 @@
         flex: 1;
         position: relative;
       }
+      .contact-form > .subject,
+      .contact-address-subject {
+        font-family: 'GmarketSans', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        user-select: none;
+      }
       .contact-form > .content > p {
         display: block;
         font-size: 1.125rem;
@@ -32,15 +38,7 @@
       .contact-form > .content > p:first-child {
         margin-top: 0;
       }
-      .contact-address-subject,
-      .contact-form > .subject {
-        font-family: 'GmarketSans', sans-serif;
-        font-size: 1.25rem;
-        font-weight: 700;
-        user-select: none;
-      }
       .contact-map {
-        cursor: pointer;
         height: 17.5rem;
         min-width: 36.25rem;
         width: 100%;
@@ -56,15 +54,6 @@
           width: 100%;
         }
       }
-      @media(max-width: 768px) {
-        .contact-address-subject,
-        .contact-form > .subject {
-          font-size: 1.125rem;
-        }
-        .contact-form > .content > p {
-          font-size: 1rem;
-        }
-      }
     </style>
   </head>
   <body>
@@ -72,7 +61,7 @@
     <%- include('./common/nav') %>
     <!-- Page section -->
     <section>
-      <article class="tov-hero" style="background-image: url('/images/hero/contact.png');">
+      <article class="tov-hero" style="background-image: url('/images/hero/privacydam.png');">
         <div class="tov-container mx-auto tov-px">
           <div class="tov-hero-content">
             <h1 class="title tov-font-en">Contact</h1>
@@ -101,10 +90,8 @@
             <h5 class="contact-address-subject md:mb-5 md:mt-20 mb-7.5 mt-25">Address</h5>
             <div class="md:mb-7.5 mb-15 tov-form-row tov-flex-col">
               <div class="contact-form md:mb-0 md:mr-22 mb-5 mr-0">
-                <div class="content">
-                  <p class="font-bold mb-2.5 tov-font-kr" style="color: #274F9D;">본사</p>
-                  <p class="tov-font-kr">대전광역시 유성구 대학로 291, KAIST E19, 9F 대전창조경제혁신센터</p>
-                </div>
+                <p class="font-bold mb-2.5 tov-font-kr" style="color: #274F9D;">본사</p>
+                <p class="tov-font-kr">대전광역시 유성구 대학로 291, KAIST E19, 9F 대전창조경제혁신센터</p>
               </div>
               <div class="contact-form">
                 <div class="bg-blue-200 contact-map" id="map-head-office"></div>
@@ -112,10 +99,8 @@
             </div>
             <div class="tov-form-row tov-flex-col">
               <div class="contact-form md:mb-0 md:mr-22 mb-5 mr-0">
-                <dic class="content">
-                  <p class="font-bold mb-2.5 tov-font-kr" style="color: #274F9D;">연구소</p>
-                  <p class="tov-font-kr">대전광역시 유성구 대학로 99, 대전팁스타운 502호</p>
-                </dic>
+                <p class="font-bold mb-2.5 tov-font-kr" style="color: #274F9D;">연구소</p>
+                <p class="tov-font-kr">대전광역시 유성구 대학로 99, 대전팁스타운 502호</p>
               </div>
               <div class="contact-form">
                 <div class="bg-blue-200 contact-map" id="map-research-institute"></div>
@@ -134,28 +119,24 @@
     <script>
       // Map various
       const mapLevel = 4;
-      // Default map options
-      const defaultMapOptions = {
-        disableDoubleClick: false,
-        disableDoubleClickZoom: false,
-        draggable: false,
-        level: mapLevel,
-        scrollwheel: false
-      };
       // Get map containers
       const containerMapHO = document.getElementById('map-head-office');
       const containerMapRI = document.getElementById('map-research-institute');
       // Set position
       const posHO = new kakao.maps.LatLng(36.3683901619272, 127.36662335381794);
       const posRI = new kakao.maps.LatLng(36.36332909216839, 127.34691762683119);
-      // Set options
-      const optionsHO = JSON.parse(JSON.stringify(defaultMapOptions));
-      const optionsRI = JSON.parse(JSON.stringify(defaultMapOptions));
-      optionsHO.center = posHO;
-      optionsRI.center = posRI;
       // Create map
-      const mapHO = new kakao.maps.Map(containerMapHO, optionsHO);
-      const mapRI = new kakao.maps.Map(containerMapRI, optionsRI);
+      const mapHO = new kakao.maps.Map(containerMapHO, {
+        center: posHO,
+        // disableDoubleClick: false,
+        // draggable: false,
+        level: mapLevel
+        // scrollwheel: false
+      });
+      const mapRI = new kakao.maps.Map(containerMapRI, {
+        center: posRI,
+        level: mapLevel
+      });
       // Set marker
       new kakao.maps.Marker({
         map: mapHO,
@@ -164,14 +145,6 @@
       new kakao.maps.Marker({
         map: mapRI,
         position: posRI
-      });
-
-      // Click event
-      containerMapHO.addEventListener('click', function() {
-        window.open('	https://map.kakao.com/link/map/TOVDATA,36.3683901619272,127.36662335381794', '_blank')
-      });
-      containerMapRI.addEventListener('click', function() {
-        window.open('	https://map.kakao.com/link/map/TOVDATA연구소,36.36332909216839, 127.34691762683119', '_blank')
       });
     </script>
   </body>

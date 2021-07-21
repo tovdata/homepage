@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="images/thumbnail.jpg">
+    <title>TOVDATA</title>
+    <link rel="icon" href="icons/favicon.svg">
+
+    <!-- Font style -->
+    <link rel="stylesheet" href="stylesheets/font.css">
+    <!-- Nav style -->
+    <link rel="stylesheet" href="stylesheets/nav.css">
+    <!-- Footer style -->
+    <link rel="stylesheet" href="stylesheets/footer.css">
+    <!-- Color style -->
+    <link rel="stylesheet" href="stylesheets/color.css">
+    <!-- Global style -->
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <!-- Animate style -->
+    <link rel="stylesheet" href="stylesheets/animate.min.css">
+    <!-- Home style -->
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <!-- Tailwindcss 2.0.3 -->
+    <link rel="stylesheet" href="stylesheets/tailwind.min.css">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <!-- Nav -->
+    <%- include('./common/nav') %>
+    <!-- Page section -->
+    <section>
+      <article class="tov-banner">
+        <div class="tov-banner-container" data-index="1">
+          <div class="tov-banner-image">
+            <img src="/images/home/banner/banner1.png">
+          </div>
+          <div class="mx-auto tov-banner-content tov-container tov-px">
+            <h1 class="tov-font-en title">Privacy by Design,<br>by TOVDATA</h1>
+            <p class="description mt-10">적법한 개인정보의 이용은 기업의 이미지와 고객 신뢰 형성에 핵심 요소입니다.</p>
+            <p class="description mt-8">서비스의 기획에서부터 마케팅에 이르는 비즈니스의 전 과정에서,<br>기업과 고객들에게 가장 잘 맞는 개인정보의 수집과 이용 방법을 함께 설계하고 구현합니다.</p>
+          </div>
+        </div>
+        <div class="tov-banner-container hidden" data-index="2">
+          <div class="tov-banner-image">
+            <img src="/images/home/banner/banner2.png">
+          </div>
+          <div class="mx-auto tov-banner-content tov-container tov-px">
+            <h5 class="title-point">Privacy Data Access Management</h5>
+            <h1 class="tov-font-en title">Privacy DAM</h1>
+            <p class="description mt-22">개인정보에 대한 접근을 한눈에!<br>안전하고 편리한 개인정보 접근 관리로<br>기업의 개인정보보호 수준을 UP!  고객의 신뢰도 UP! UP!</p>
+          </div>
+        </div>
+        <div class="tov-banner-container hidden" data-index="3">
+          <div class="tov-banner-image">
+            <img src="/images/home/banner/banner3.png">
+          </div>
+          <div class="mx-auto tov-banner-content tov-container tov-px">
+            <h5 class="title-point">Consulting</h5>
+            <h1 class="tov-font-kr title">개인정보관리 컨설팅</h1>
+            <p class="description mt-22">기업이 올바르고 안전하게<br>고객의 개인정보를 이용하기 위한 방법을 함께 고민합니다.<br>서비스의 상황에 맞는 안전한 개인정보 이용 방법을 제안해 드립니다.</p>
+          </div>
+        </div>
+        <div class="tov-banner-indicator">
+          <span class="active indicator-item" data-index="1"></span>
+          <span class="indicator-item" data-index="2"></span>
+          <span class="indicator-item" data-index="3"></span>
+        </div>
+      </article>
+      <article class="tov-section">
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="tov-form-row tov-flex-col">
+              <div class="tov-form-video" id="player"></div>
+              <div class="lg:ml-24 md:ml-18 md:mt-0 ml-0 mt-12 tov-form-content">
+                <span class="quotation-mark">
+                  <img src="/icons/home/quotation-mark.svg">
+                </span>
+                <h3 class="title pt-sm">고객의 개인정보를 다루는 기업들의 개인정보 보호 수준을 올려드립니다</h3>
+                <p class="description">데이터 활용은 선택이 아닌 필수입니다. 적법한 데이터 활용은 기업의 경쟁력을 높여줌과 동시에 고객의 신뢰를 얻고, 새로운 비지니스 기회를 열어줍니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="tov-section" style="background-color: #F5F8FD;">
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="tov-form-header">
+              <h5 class="title-point">TOVDATA’s Solutions</h5>
+              <h1 class="title">토브데이터의 솔루션</h1>
+              <hr class="line">
+            </div>
+            <div class="mb-25 md:mb-20 tov-form-row tov-flex-col">
+              <div class="tov-form-image">
+                <img src="images/home/solution/privacydam.png">
+              </div>
+              <div class="lg:ml-24 md:ml-18 md:mt-0 ml-0 mt-12 tov-form-content">
+                <h3 class="lang-en title pt-sm">Privacy DAM</h3>
+                <p class="description">Privacy DAM은 개인정보 데이터의 접근을 제어하기 위한 관제 솔루션으로, 개인정보가 담겨있는 데이터베이스에 대한 접속을 등록/관리하고, 데이터 반출시에는 비식별화 처리를 통해, 개인정보 활용의 안전성을 높여줍니다.</p>
+                <a class="button" href="/privacydam">더 보기</a>
+              </div>
+            </div>
+            <div class="mb-25 md:mb-20 tov-form-row tov-flex-col-reverse">
+              <div class="lg:mr-24 md:mr-18 md:mt-0 mr-0 mt-12 tov-form-content">
+                <h3 class="lang-en title pt-sm">Consulting</h3>
+                <p class="description">회사마다 다루고 있는 개인정보의 양과 종류는 다양합니다. 각 사의 서비스와 개인정보의 이용 목적에 따라, 관련 규정의 요구사항을 확인하고, 적법하고 안전한 개인정보 활용에 필요한 사항들을 알려드립니다.</p>
+                <a class="button" href="/consulting">더 보기</a>
+              </div>
+              <div class="tov-form-image">
+                <img src="images/privacydam/function2.png">
+              </div>
+            </div>
+          </div>
+        </div> 
+      </article>
+      <article class="tov-section">
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="tov-form-header">
+              <h5 class="title-point">Why TOVDATA?</h5>
+              <h1 class="title">왜 토브데이터여야 할까요?</h1>
+              <hr class="line">
+            </div>
+            <div class="tov-form-row tov-card-form">
+              <div class="tov-card">
+                <div class="tov-home-card">
+                  <span class="icon">
+                    <img src="icons/home/whyTov1.svg">
+                  </span>
+                  <h5 class="subject">법에 대한 이해</h5>
+                  <p class="description">국내 개인정보보호법, EU GDPR과 같은 개인정보 관련 규제와 법률의 이해</p>
+                </div>
+              </div>
+              <div class="tov-card">
+                <div class="tov-home-card">
+                  <span class="icon">
+                    <img src="icons/home/whyTov2.svg">
+                  </span>
+                  <h5 class="subject">IT시스템의 전문성</h5>
+                  <p class="description">기업의 개인정보관리시스템과 같은 기업의 기존 정보시스템에 대한 이해</p>
+                </div>
+              </div>
+              <div class="tov-card">
+                <div class="tov-home-card">
+                  <span class="icon">
+                    <img src="icons/home/whyTov3.svg">
+                  </span>
+                  <h5 class="subject">통계적 데이터 처리</h5>
+                  <p class="description">기업이 보유한 개인정보 데이터의 안전한 활용을 위한 데이터 분석 기술의 이해</p>
+                </div>
+              </div>
+            </div>
+            <div class="tov-form-row mt-20" style="color: #274F9D;">
+              <h2 class="text-2xl text-center w-full" style="font-weight: 600;">토브데이터는 개인정보 관련 규제의 전문지식 뿐 아니라 IT시스템 전반의 설계・개발 및 운영 경험까지 풍부한 전문 인력들이 고객사 환경에 맞는 개인정보보호시스템 구성도 함께 컨설팅 해드립니다</h2>
+            </div>
+            <div class="tov-form-row tov-form-row-pt">
+              <div class="grid grid-cols-2 gap-18 w-full">
+                <div class="col-span-2 md:col-span-1">
+                  <h5 class="mb-9 text-center text-lg tov-font-en tov-font-gray-3">Seed Group</h5>
+                  <div class="flex justify-between relative">
+                    <img class="relation-image" src="/images/home/relation/mediaLab.png">
+                    <img class="relation-image" src="/images/home/relation/ki.png">
+                  </div>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                  <h5 class="mb-9 text-center text-lg tov-font-en tov-font-gray-3">Investor</h5>
+                  <div class="flex justify-between relative">
+                    <img class="relation-image" src="/images/home/relation/piamond.png">
+                    <img class="relation-image" src="/images/home/relation/kaist.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tov-form-row tov-form-row-pt">
+              <div class="tov-comment-form">
+                <h2 class="tov-comment left">최신 개인정보 뉴스를 알고싶다면?</h2>
+                <div class="flex justify-center">
+                  <a class="tov-comment-button" onclick="goNews()">월간개인정보 뉴스레터 구독</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Footer -->
+      <%- include('./common/footer')%>
+    </section>
+
+    <!--  -->
+    <script>
+      // Go news
+      function goNews() {
+        window.open('https://page.stibee.com/subscriptions/128813', '_blank');
+      }
+
+      // Banner various
+      let slideDuration = 8000;
+      let currentBannerIndex = 1;
+      let slideHandler = null;
+
+      // DOM loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        // Set banner slider
+        setSlider(slideDuration);
+      });
+
+      // Banner indicator event
+      document.querySelectorAll('.indicator-item').forEach(function(elem) {
+        elem.addEventListener('click', function() {
+          const index = Number(this.dataset.index);
+          // Slide event
+          slideBanner(index);
+          // Reset slider
+          clearSlider();
+          setSlider(slideDuration);
+        });
+      });
+
+      // Banner slide event
+      function slideBanner(index) {
+        if (index !== currentBannerIndex) {
+          // Set to hidden banner animation
+          hiddenBanner(document.querySelector(`.tov-banner-container[data-index="${currentBannerIndex}"]`));
+          document.querySelector(`.tov-banner-indicator > .indicator-item[data-index="${currentBannerIndex}"]`).classList.remove('active');
+          // Set to show banner animation
+          showBanner(document.querySelector(`.tov-banner-container[data-index="${index}"]`));
+          document.querySelector(`.tov-banner-indicator > .indicator-item[data-index="${index}"]`).classList.add('active');
+          // Set banner index
+          currentBannerIndex = index;
+        }
+      } 
+      // Create auto slide handler
+      function setSlider(duration) {
+        slideHandler = setInterval(() => {
+          // Set banner index
+          let index = currentBannerIndex + 1;
+          if (index > 3) {
+            index = 1;
+          }
+          // Slide event
+          slideBanner(index);
+        }, duration);
+      }
+      // Clear auto slide handler
+      function clearSlider() {
+        clearInterval(slideHandler);
+      }
+
+      // Show banner animate
+      function showBanner(elem) {
+        // Show element
+        elem.classList.remove('hidden');
+        // Set animation
+        elem.classList.add('animate__animated', 'animate__fadeIn');
+        // Set ending animation function
+        function handleAnimationEnd(event) {
+          event.stopPropagation();
+          elem.classList.remove('animate__animated', 'animate__fadeIn', 'hidden');
+        }
+        elem.addEventListener('animationend', handleAnimationEnd, {once: true});
+      }
+      // Hidden banner animate
+      function hiddenBanner(elem) {
+        // Set animation
+        elem.classList.add('animate__animated', 'animate__fadeOut');
+        // Set ending animation function
+        function handleAnimationEnd(event) {
+          event.stopPropagation();
+          elem.classList.remove('animate__animated', 'animate__fadeOut');
+          elem.classList.add('hidden');
+        }
+        elem.addEventListener('animationend', handleAnimationEnd, {once: true});
+      }
+
+      // Load the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // Replace the 'player' element with an <iframe> and
+      // YouTube player after the API code downloads.
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+          // events: {
+          //   'onReady': function(event) {
+          //     event.target.playVideo();
+          //   }
+          // },
+          videoId: 'hWil2OMM6vk'
+        });
+      }
+    </script>
+  </body>
+</html>

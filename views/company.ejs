@@ -3,489 +3,388 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="images/thumbnail.jpg">
     <title>TOVDATA</title>
+    <link rel="icon" href="icons/favicon.svg">
 
-    <!-- Font CSS -->
+    <!-- Font style -->
     <link rel="stylesheet" href="stylesheets/font.css">
+    <!-- Nav style -->
+    <link rel="stylesheet" href="stylesheets/nav.css">
+    <!-- Footer style -->
+    <link rel="stylesheet" href="stylesheets/footer.css">
+    <!-- Color style -->
+    <link rel="stylesheet" href="stylesheets/color.css">
+    <!-- Global style -->
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <!-- Company style -->
+    <link rel="stylesheet" href="stylesheets/custom-company.css">
     <!-- Tailwindcss 2.0.3 -->
     <link rel="stylesheet" href="stylesheets/tailwind.min.css">
-    <!-- Font Awesome 5.10.0 -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="stylesheets/animate.min.css">
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="stylesheets/global.css">
-    <!-- Custom -->
-    <style>
-      .tov-member-card {
-        user-select: none;
-      }
-      .tov-member-image {
-        overflow: hidden;
-      }
-      .tov-member-image > img {
-        cursor: grab;
-        filter: grayscale(100%);
-        transition: all 0.3s;
-      }
-      .tov-member-image > img:hover {
-        filter: grayscale(0%);
-        transform: scale(1.05);
-      }
-
-      .tov-history {
-        flex: 1;
-        user-select: none;
-      }
-      .tov-history-row {
-        display: flex;
-        position: relative;
-      }
-      .tov-history-row-left,
-      .tov-history-row-right {
-        display: flex;
-        flex: 50%;
-        width: 50%;
-      }
-      .tov-history-content {
-        padding-top: 0.125rem;
-      }
-      .tov-history-row-left {
-        flex-direction: row-reverse;
-        padding-right: 1.5rem;
-      }
-      .tov-history-row-left > .tov-history-content {
-        text-align: right;
-      }
-      .tov-history-row-left > h5 + .tov-history-content {
-        margin-right: 1rem;
-      }
-      .tov-history-row-right {
-        padding-left: 1.5rem;
-      }
-      .tov-history-row-right > .tov-history-content {
-        text-align: left;
-      }
-      .tov-history-row-right > h5 + .tov-history-content {
-        margin-left: 1rem;
-      }
-      .tov-history-flow {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        padding-top: 0.25rem;
-        position: relative;
-      }
-      .tov-history-flow-bar {
-        border-color: #5B87E0;
-        border-left-width: 3px;
-        height: calc(100% - 1.375rem);
-        margin-right: 1.5px;
-        margin-top: 0.25rem;
-        min-height: 2.75rem;
-      }
-      .tov-history-flow-circle {
-        border-color: #5B87E0;
-        border-radius: 50%;
-        border-width: 3px;
-        height: 1.375rem;
-        width: 1.375rem;
-      }
-      .tov-history-flow-circle.fill {
-        background-color: #5B87E0;
-      }
-    </style>
   </head>
   <body>
-    <!-- Navbar -->
+    <!-- Nav -->
     <%- include('./common/nav') %>
-    <!-- Page body -->
+    <!-- Page section -->
     <section>
-      <!-- Hero -->
-      <article class="hero-section">
-        <div class="bg-center bg-cover hero-container" style="background-image: url(/images/hero/company.png);">
-          <div class="container mx-auto tov-px-default">
-            <div class="hero">
-              <div class="hero-content">
-                <h1 class="font-bold md:text-5xl text-4xl text-white tov-font-en tov-line-height">Build<br/>Trust, Opportunity, Value<br/>on your Data.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <!-- Page content -->
-      <article class="tov-section">
-        <div class="container mx-auto">
-          <div class="tov-container">
-            <div class="mb-17 items-center tov-container-row">
-              <div class="tov-image tov-image-sol">
-                <img class="w-full" src="/images/company/mission.png">
-              </div>
-              <div class="tov-row-content md:ml-23">
-                <h5 class="mb-2 text-lg tov-font-en tov-font-blue-3">Misson</h5>
-                <h3 class="font-bold mb-7 text-3xl tov-font-kr tov-font-blue-2 tov-line-height">토브데이터는 고객의 신뢰로부터 기업이 성장할 수 있다고 믿습니다</h3>
-                <p class="mb-7.5 text-lg tov-font-kr tov-font-gray-3">데이터 경제 시대의 신뢰를 바탕으로 한 선순환 생태계를 만드는 일에 토브데이터가 앞장서겠습니다</p>
-              </div>
-            </div>
-            <div class="items-center tov-container-row tov-container-row-reverse">
-              <div class="tov-image tov-image-sol">
-                <img class="w-full" src="/images/company/motivation.png">
-              </div>
-              <div class="tov-row-content md:mr-23">
-                <h5 class="mb-2 text-lg tov-font-en tov-font-blue-3">Motivation</h5>
-                <h3 class="font-bold mb-7 text-3xl tov-font-kr tov-font-blue-2 tov-line-height">토브데이터가 가장 잘 할 수 있고, 가장 자신 있는 일을 하고자 합니다</h3>
-                <p class="mb-7.5 text-lg tov-font-kr tov-font-gray-3">오랜기간 IT분야에서 다양한 전문성을 가진 사람들이 누구나 공감하는 중요한 문제의 해결을 통해 기술로써 사회적 가치를 실현하고, 더 나아가 신뢰 있는 사회를 만드는 일에 기여하고자 합니다</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class="tov-section tov-bg-blue-5">
-        <div class="container mx-auto">
-          <div class="tov-container">
-            <h3 class="font-bold text-4xl text-center tov-font-kr tov-font-blue-2 tov-line-height">Build TRUST, by TOVDATA<br/>신뢰있는 사람들이 모여 신뢰있는 기업을 만들고자 합니다</h3>
+      <article class="tov-hero" style="background-image: url('/images/hero/company.png');">
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-hero-content">
+            <h1 class="tov-font-en title">Build<br>Trust, Opportunity, Value<br>on your Data.</h1>
           </div>
         </div>
       </article>
       <article class="tov-section">
-        <div class="container mx-auto">
-          <div class="tov-container tov-container-pt">
-            <div class="flex flex-col lg:flex-row">
-              <div class="lg:mb-0 lg:mr-21 mb-20 mr-0">
-                <p class="mb-1.5 text-lg tov-font-blue-3 tov-font-en">Team</p>
-                <h3 class="break-words font-bold text-3xl tov-font-gray-2 tov-font-en xl:whitespace-nowrap whitespace-normal">TOVDATA’s Member</h3>
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="mb-25 md:mb-20 tov-form-row tov-flex-col">
+              <div class="tov-form-image">
+                <img src="images/company/mission.png">
               </div>
-              <div class="grid grid-cols-2 gap-y-9 md:grid-cols-3">
-                <div class="col-span-1 tov-member-card">
-                  <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Ellie.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">박효진</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">CEO, Founder</p>
-                    <p class="member-career text-xs tov-font-gray-3">KAIST 정보통신공학 박사</p>
-                  </div>
-                </div>
-                <div class="col-span-1 tov-member-card">
-                  <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Tim.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">정성관</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">CTO, Co-Founder</p>
-                    <p class="member-career text-xs tov-font-gray-3">KAIST 전기및전자공학 박사</p>
-                    <p class="member-career text-xs tov-font-gray-3">KAIST IT융합연구소</p>
-
-                  </div>
-                </div>
-                <div class="col-span-1 tov-member-card">
-                  <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Suzy.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">전수지</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">CMO, Co-Founder</p>
-                    <p class="member-career text-xs tov-font-gray-3">충남대학교 경영학 박사</p>
-                    <p class="member-career text-xs tov-font-gray-3">KAIST IT융합연구소</p>
-                  </div>
-                </div>
-                <div class="col-span-1 tov-member-card">
-                  <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Leo.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">전규영</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">Developer</p>
-                    <p class="member-career text-xs tov-font-gray-3">성균관대학교 컴퓨터공학 석사</p>
-                    <p class="member-career text-xs tov-font-gray-3">SKT, LG전자</p>
-                  </div>
-                </div>
-                <div class="col-span-1 tov-member-card">
-                  <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Min.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">박해민</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">Developer</p>
-                    <p class="member-career text-xs tov-font-gray-3">KAIST IT융합연구소</p>
-                  </div>
-                </div>
-                <div class="col-span-1 tov-member-card">
-                  <!-- <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Ellie.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">박효진</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">CEO, Founder</p>
-                    <p class="member-career text-xs tov-font-gray-3">KAIST 정보통신공학 박사</p>
-                  </div> -->
-                </div>
-                <div class="col-span-1 tov-member-card">
-                  <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Seon.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">박효주</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">Manager</p>
-                    <p class="member-career text-xs tov-font-gray-3">KAIST 기술경영 석사</p>
-                    <p class="member-career text-xs tov-font-gray-3">부산산업과학혁신원(BISTEP)</p>
-                  </div>
-                </div>
-                <div class="col-span-1 tov-member-card">
-                  <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Logan.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">최환석</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">Manager</p>
-                    <p class="member-career text-xs tov-font-gray-3">한밭대학교 멀티미디어공학 박사</p>
-                    <p class="member-career text-xs tov-font-gray-3">KAIST 전기및전자공학과</p>
-                  </div>
-                </div>
-                <div class="col-span-1 tov-member-card">
-                  <div class="px-9 tov-member-image">
-                    <img src="/images/company/member/Jenny.png">
-                  </div>
-                  <hr class="mb-5.5 border-b border-gray-800">
-                  <div class="px-11 tov-member-content">
-                    <h5 class="font-bold mb-1 member-name text-xl tov-font-gray-2 tov-font-kr">정재은</h5>
-                    <p class="mb-2.5 text-sm tov-font-gray-2">Designer</p>
-                    <p class="member-career text-xs tov-font-gray-3">인제대학교 헬스케어IT공학 석사</p>
-                  </div>
-                </div>
+              <div class="lg:ml-24 md:ml-18 md:mt-0 ml-0 mt-12 tov-form-content">
+                <h5 class="title-point">Mission</h5>
+                <h3 class="title">토브데이터는 고객의 신뢰로부터 기업이 성장할 수 있다고 믿습니다</h3>
+                <p class="description">데이터 경제 시대의 신뢰를 바탕으로 한 선순환 생태계를 만드는 일에 토브데이터가 앞장서겠습니다</p>
+              </div>
+            </div>
+            <div class="tov-form-row tov-flex-col-reverse">
+              <div class="lg:mr-24 md:mr-18 md:mt-0 mr-0 mt-12 tov-form-content">
+                <h5 class="title-point">Motivation</h5>
+                <h3 class="title">토브데이터가 가장 잘 할 수 있고, 가장 자신 있는 일을 하고자 합니다</h3>
+                <p class="description">오랜기간 IT분야에서 다양한 전문성을 가진 사람들이 누구나 공감하는 중요한 문제의 해결을 통해 기술로써 사회적 가치를 실현하고, 더 나아가 신뢰 있는 사회를 만드는 일에 기여하고자 합니다</p>
+              </div>
+              <div class="tov-form-image">
+                <img src="images/company/motivation.png">
               </div>
             </div>
           </div>
         </div>
       </article>
-      <article class="tov-section">
-        <div class="container mx-auto">
-          <div class="tov-container" style="padding-top: 6.5rem; padding-bottom: 2.5rem;">
-            <div class="tov-container-row">
-              <h1 class="font-bold text-3xl mb-5 md:mb-0 tov-font-gray-1">토브데이터와 함께하고 싶다면?</h1>
-              <button class="border rounded-md px-8 py-1 text-lg tov-border-blue-4 tov-font-blue-4 tov-font-kr">토브데이터 채용공고 바로가기</button>
+      <article class="tov-section" style="background-color: #F5F8FD;">
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="tov-form-row">
+              <h2 class="tov-comment w-full">Build TRUST, by TOVDATA<br>신뢰있는 사람들이 모여 신뢰있는 기업을 만들고자 합니다</h2>
             </div>
           </div>
-        </div>
+        </div> 
       </article>
       <article class="tov-section">
-        <div class="container mx-auto">
-          <div class="tov-container">
-            <div class="flex flex-col lg:flex-row">
-              <div class="lg:mb-0 lg:mr-21 mb-16 mr-0">
-                <p class="mb-1.5 text-lg tov-font-blue-3 tov-font-en">Growth</p>
-                <h3 class="break-words font-bold text-3xl tov-font-gray-2 tov-font-en xl:whitespace-nowrap whitespace-normal">TOVDATA’s History</h3>
+        <div class="tov-container mx-auto tov-px">
+          <div class="tov-form">
+            <div class="tov-company-form">
+              <div class="tov-company-form-header">
+                <h5 class="title-point">Team</h5>
+                <h3 class="title">TOVDATA’s Member</h3>
               </div>
-              <div class="tov-history lg:mt-8 mt-0">
-                <h5 class="font-bold mb-5 text-2xl text-center tov-font-en tov-font-blue-3">2021</h5>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">파트너 프로그램 런칭</p>
+              <div class="tov-company-form-content">
+                <div class="grid grid-cols-1 gap-y-9 md:grid-cols-3 xs:grid-cols-2">
+                  <div class="col-span-1 tov-member-card">
+                    <div class="tov-member-image">
+                      <img src="/images/company/member/ellie.png">
+                    </div>
+                    <div class="tov-member-content">
+                      <h5 class="name">박효진</h5>
+                      <p class="position">CEO, Founder</p>
+                      <p class="career">KAIST 정보통신공학 박사</p>
                     </div>
                   </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right"></div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left"></div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">05</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">대전팁스타운 입주</p>
+                  <div class="col-span-1 tov-member-card">
+                    <div class="tov-member-image">
+                      <img src="/images/company/member/tim.png">
+                    </div>
+                    <div class="tov-member-content">
+                      <h5 class="name">정성관</h5>
+                      <p class="position">CTO, Co-Founder</p>
+                      <p class="career">KAIST 전기및전자공학 박사</p>
+                      <p class="career">KAIST IT융합연구소</p>
                     </div>
                   </div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left"></div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">04</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">벤처기업 인증</p>
+                  <div class="col-span-1 tov-member-card">
+                    <div class="tov-member-image">
+                      <img src="/images/company/member/suzy.png">
+                    </div>
+                    <div class="tov-member-content">
+                      <h5 class="name">전수지</h5>
+                      <p class="position">CMO, Co-Founder</p>
+                      <p class="career">충남대학교 경영학 박사</p>
+                      <p class="career">KAIST IT융합연구소</p>
                     </div>
                   </div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">스타트업을 위한 개인정보보호 컨설팅 이벤트</p>
+                  <div class="col-span-1 tov-member-card">
+                    <div class="tov-member-image">
+                      <img src="/images/company/member/leo.png">
+                    </div>
+                    <div class="tov-member-content">
+                      <h5 class="name">전규영</h5>
+                      <p class="position">Developer</p>
+                      <p class="career">성균관대학교 컴퓨터공학 석사</p>
+                      <p class="career">SKT, LG전자</p>
                     </div>
                   </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right"></div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">01</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">기업부설연구소 설립</p>
+                  <div class="col-span-1 tov-member-card">
+                    <div class="tov-member-image">
+                      <img src="/images/company/member/min.png">
+                    </div>
+                    <div class="tov-member-content">
+                      <h5 class="name">박해민</h5>
+                      <p class="position">Developer</p>
+                      <p class="career">KAIST IT융합연구소</p>
                     </div>
                   </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right"></div>
-                </div>
-                <h5 class="font-bold my-5 text-2xl text-center tov-font-en tov-font-blue-3">2020</h5>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left"></div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">12</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">TIPS 프로그램 선정</p>
+                  <div class="col-span-1 tov-member-card"></div>
+                  <div class="col-span-1 tov-member-card">
+                    <div class="tov-member-image">
+                      <img src="/images/company/member/seon.png">
+                    </div>
+                    <div class="tov-member-content">
+                      <h5 class="name">박효주</h5>
+                      <p class="position">Manager</p>
+                      <p class="career">KAIST 기술경영 석사</p>
+                      <p class="career">부산산업과학혁신원(BISTEP)</p>
                     </div>
                   </div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">경남 김해 강소특구 전문인력양성 사업 수행</p>
+                  <div class="col-span-1 tov-member-card">
+                    <div class="tov-member-image">
+                      <img src="/images/company/member/logan.png">
+                    </div>
+                    <div class="tov-member-content">
+                      <h5 class="name">최환석</h5>
+                      <p class="position">Manager</p>
+                      <p class="career">한밭대학교 멀티미디어공학 박사</p>
+                      <p class="career">KAIST 전기및전자공학과</p>
                     </div>
                   </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right"></div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                  </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">11</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">KAIST Tech Day 참가</p>
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">KAIST LabStartup 수상(3위)</p>
+                  <div class="col-span-1 tov-member-card">
+                    <div class="tov-member-image">
+                      <img src="/images/company/member/jenny.png">
+                    </div>
+                    <div class="tov-member-content">
+                      <h5 class="name">정재은</h5>
+                      <p class="position">Designer</p>
+                      <p class="career">인제대학교 헬스케어IT공학 석사</p>
                     </div>
                   </div>
                 </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">10</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">대전창조경제혁신센터 입주</p>
-                    </div>
-                  </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right"></div>
+              </div>
+            </div>
+            <div class="tov-form-row tov-form-row-pt">
+              <div class="tov-comment-form">
+                <h2 class="tov-comment left">토브데이터와 함께하고 싶다면?</h2>
+                <div class="flex justify-center">
+                  <a class="tov-comment-button" onclick="goNotion()">토브데이터 채용공고 바로가기</a>
                 </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
+              </div>
+            </div>
+            <div class="tov-company-form tov-form-row-pt">
+              <div class="tov-company-form-header">
+                <h5 class="title-point">Growth</h5>
+                <h3 class="title">TOVDATA’s History</h3>
+              </div>
+              <div class="flex-1 md:mt-10 mt-4 tov-company-form-content">
+                <div class="tov-history">
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                      <div class="tov-history-content">
+                        <p>파트너 프로그램 런칭</p>
+                      </div>
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right"></div>
                   </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">09</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">Seed 투자유치 by 카이스트청년창업투자지주</p>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left"></div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">05</h5>
+                      <div class="tov-history-content">
+                        <p>대전팁스타운 입주</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                  </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">08</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">DVS(Dream Venture Star) 프로그램 선정</p>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left"></div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">04</h5>
+                      <div class="tov-history-content">
+                        <p>벤처기업 인증</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">07</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">dEMS PoC with AWS Korea</p>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                      <div class="tov-history-content">
+                        <p>스타트업을 위한 개인정보보호 컨설팅 이벤트</p>
+                      </div>
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right"></div>
+                  </div>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                      <h5 class="tov-history-month">01</h5>
+                      <div class="tov-history-content">
+                        <p>기업부설연구소 설립</p>
+                      </div>
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right"></div>
+                  </div>
+                  <h5 class="tov-history-year">2021</h5>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left"></div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">12</h5>
+                      <div class="tov-history-content">
+                        <p>TIPS 프로그램 선정</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle"></span>
-                    <span class="block tov-history-flow-bar"></span>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                      <div class="tov-history-content">
+                        <p>경남 김해 강소특구 전문인력양성 사업 수행</p>
+                      </div>
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right"></div>
                   </div>
-                  <div class="tov-history-row-right"></div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                  </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">06</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">KAIST E5 프로그램 최우수상(1위)</p>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">11</h5>
+                      <div class="tov-history-content">
+                        <p>KAIST Tech Day 참가</p>
+                        <p>KAIST LabStartup 수상(3위)</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                      <h5 class="tov-history-month">10</h5>
+                      <div class="tov-history-content">
+                        <p>대전창조경제혁신센터 입주</p>
+                      </div>
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right"></div>
                   </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">05</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">AWS Partnet Network 가입</p>
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">Angel 투자유치 by 피아몬드 주식회사</p>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">09</h5>
+                      <div class="tov-history-content">
+                        <p>Seed 투자유치<br>(by 카이스트청년창업투자지주)</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="tov-history-row">
-                  <div class="tov-history-row-left">
-                  </div>
-                  <div class="tov-history-flow">
-                    <span class="block tov-history-flow-circle fill"></span>
-                    <span class="block tov-history-flow-bar"></span>
-                  </div>
-                  <div class="tov-history-row-right">
-                    <h5 class="text-2xl tov-font-en tov-font-gray-2 whitespace-nowrap">04</h5>
-                    <div class="tov-history-content">
-                      <p class="text-lg tov-font-gray-3 tov-font-kr">TOVDATA 설립</p>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">08</h5>
+                      <div class="tov-history-content">
+                        <p>DVS(Dream Venture Star) 프로그램 선정</p>
+                      </div>
                     </div>
                   </div>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                      <h5 class="tov-history-month">07</h5>
+                      <div class="tov-history-content">
+                        <p>dEMS PoC with AWS Korea</p>
+                      </div>
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right"></div>
+                  </div>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">06</h5>
+                      <div class="tov-history-content">
+                        <p>KAIST E5 프로그램 최우수상(1위)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">05</h5>
+                      <div class="tov-history-content">
+                        <p>AWS Partnet Network 가입</p>
+                        <p>Seed 투자유치<br>(by 피아몬드 주식회사)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tov-history-row">
+                    <div class="tov-history-row-left">
+                    </div>
+                    <div class="tov-history-flow">
+                      <span class="block tov-history-flow-circle fill"></span>
+                      <span class="block tov-history-flow-bar"></span>
+                    </div>
+                    <div class="tov-history-row-right">
+                      <h5 class="tov-history-month">04</h5>
+                      <div class="tov-history-content">
+                        <p>TOVDATA 설립</p>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="tov-history-year">2020</h5>
                 </div>
               </div>
             </div>
@@ -493,15 +392,13 @@
         </div>
       </article>
       <!-- Footer -->
-      <%- include('./common/footer') %>
+      <%- include('./common/footer')%>
     </section>
 
-    <!-- Animate JS -->
-    <script type="text/javascript" src="javascripts/animate.js"></script>
-    <!-- Nav event JS -->
-    <script type="text/javascript" src="javascripts/nav.js"></script>
     <script>
-
+      function goNotion() {
+        window.open('https://truth-promotion-99b.notion.site/cca7af2c8fae499386c3a4d0c9e9ff5f', '_blank');
+      }
     </script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 // Add animation
-const addAnimation = (elem, animation, isHidden=false, endings=[], speed=null) => new Promise((resolve, reject) => {
+const addAnimation = (elem, animation, isHidden=false, repeat=false, speed=null) => new Promise((resolve, reject) => {
   if (isHidden) {
     elem.classList.remove('hidden');
     elem.classList.remove('opacity-0');

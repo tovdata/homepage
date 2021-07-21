@@ -1,31 +1,40 @@
-<!-- Navbar (top) -->
-<nav class="absolute left-0 text-white top-0 w-full z-50">
-  <div class="container mx-auto nav-bar tov-px-default">
-    <div class="brand-logo logo-top">
-      <a href="/"><img src="/images/light-logo.png"></a>
+<!-- Nav (top) -->
+<nav class="nav-background">
+  <div class="tov-container mx-auto nav-bar tov-px">
+    <a class="brand-logo" href="/"><img src="images/light-logo.png"></a>
+    <a class="nav-list-icon" onclick="showSideNav()"><img src="icons/light-menu.png"></a>
+    <div class="nav-list">
+      <a class="nav-item" href="/privacydam">PrivacyDAM</a>
+      <a class="nav-item" href="/consulting">Consulting</a>
+      <a class="nav-item" onclick="goBlog()">Blog</a>
+      <a class="nav-item" href="/company">Company</a>
+      <a class="nav-item" href="/contact">Contact</a>
     </div>
-    <div class="hidden md:inline-block nav-menu-top">
-      <div class="nav-list">
-        <a class="cursor-pointer nav-item tov-font-en tov-line-height lg:text-sm text-xs" href="/privacydam">PrivacyDAM</a>
-        <a class="cursor-pointer nav-item tov-font-en tov-line-height lg:text-sm text-xs" href="/consulting">Consulting</a>
-        <a class="cursor-pointer go-blog nav-item tov-font-en tov-line-height lg:text-sm text-xs">Blog</a>
-        <a class="cursor-pointer nav-item tov-font-en tov-line-height lg:text-sm text-xs" href="/company">Company</a>
-        <a class="cursor-pointer go-contact nav-item tov-font-en tov-line-height lg:text-sm text-xs">Contact</a>
-      </div>
-    </div>
-    <span class="inline-block md:hidden nav-menu-icon w-6" onclick="showMenu()"><img src="/icons/light-menu.png"></span>
   </div>
 </nav>
-<!-- Navbar (side) -->
-<div class="hidden" id="nav-menu-side">
-  <div class="flex justify-end pr-8 pt-7 w-full">
-    <span class="cursor-pointer" onclick="hiddenMenu()"><i class="fas fa-times"></i></span>
-  </div>
+<!-- Nav (side) -->
+<nav class="nav-side">
+  <a class="nav-close" onclick="hiddenSideNav()"><img src="icons/cancel.png"></a>
   <div class="nav-list">
-    <a class="cursor-pointer nav-item tov-font-en text-lg" href="/privacydam">PrivacyDAM</a>
-    <a class="cursor-pointer nav-item tov-font-en text-lg" href="/consulting">Consulting</a>
-    <a class="cursor-pointer go-blog nav-item tov-font-en text-lg">Blog</a>
-    <a class="cursor-pointer nav-item tov-font-en text-lg" href="/company">Company</a>
-    <a class="cursor-pointer gp-contact nav-item tov-font-en text-lg">Contact</a>
+    <a class="nav-item" href="/privacydam">PrivacyDAM</a>
+    <a class="nav-item" href="/consulting">Consulting</a>
+    <a class="nav-item" onclick="goBlog()">Blog</a>
+    <a class="nav-item" href="/company">Company</a>
+    <a class="nav-item" href="/contact">Contact</a>
   </div>
-</div>
+</nav>
+<!-- Nav Event -->
+<script>
+  // Show side nav event
+  function showSideNav() {
+    document.querySelector('.nav-side').classList.add('active');
+  }
+  // Close side nav event
+  function hiddenSideNav() {
+    document.querySelector('.nav-side').classList.remove('active');
+  }
+  // Go blog
+  function goBlog() {
+    window.open('https://blog.tovdata.com/', '_blank');
+  }
+</script>
