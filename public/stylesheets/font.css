@@ -15,11 +15,41 @@
   font-weight: 700;
 }
 /* Spoqa Han Sans Neo fonts */
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 700;
+  src: local('Spoqa Han Sans Neo Bold'),
+  url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 500;
+  src: local('Spoqa Han Sans Neo Medium'),
+  url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 400;
+  src: local('Spoqa Han Sans Neo Regular'),
+  url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 300;
+  src: local('Spoqa Han Sans Neo Light'),
+  url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 100;
+  src: local('Spoqa Han Sans Neo Thin'),
+  url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff')
+}
+
 /* Font class */
 .tov-font-en {
   font-family: 'GmarketSans';
 }
 .tov-font-kr {
-  font-family: 'SpoqaHanSansNeo';
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
 }
