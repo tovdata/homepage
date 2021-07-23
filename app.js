@@ -19,19 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Redirect
-app.use((req, res, next) => {
-  if (req.secure) {
-    // HTTPS
-    next();
-  } else {
-    // HTTP
-    let toHttps = `https://${req.headers.host}${req.url}`;
-    console.info(`Redirect https (${toHttps})`);
-    return res.redirect(toHttps);
-  }
-});
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

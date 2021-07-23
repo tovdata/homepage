@@ -3,36 +3,41 @@
 /**
  * Module dependencies.
  */
-
-var app = require('../app');
-var debug = require('debug')('renewer-homepage:server');
-var http = require('http');
+const app = require('../app');
+const debug = require('debug')('renewer-homepage:server');
+const https = require('https');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '80' || '443');
+var port = normalizePort(process.env.PORT || '443');
 app.set('port', port);
 
 /**
- * Create HTTP server.
+ * Redirect https
  */
+app.use(function(req, res, next) {
+  if (req.secure) {   // HTTPS
+    next();
+  } else {            // HTTP
+    const toHttps = `https://${req.header.host}${req.url}`;
+    console.info(`Redirect https (${toHttps})`);
+    return res.redirect(toHttps);
+  }
+});
 
-var server = http.createServer(app);
+/**
+ * Create HTTPS server.
+ */
+var server = https.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-
-/**
- * HTTPS
- */
-server.use
 
 /**
  * Normalize a port into a number, string, or false.
