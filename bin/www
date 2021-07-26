@@ -5,22 +5,22 @@
  */
 const app = require('../app');
 const debug = require('debug')('renewer-homepage:server');
-const http = require('http');
+const https = require('http');
 
-const PORT_HTTP = 80;
+const PORT_HTTPS = 443;
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || PORT_HTTP);
+var port = normalizePort(process.env.PORT || PORT_HTTPS);
 app.set('port', port);
 
 
 /**
  * Create HTTPS server.
  */
-var server = http.createServer(app);
+var server = https.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
