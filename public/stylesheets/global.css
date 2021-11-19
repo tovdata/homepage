@@ -2,6 +2,15 @@
 body * {
   line-height: 140%;
   word-break: keep-all;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera*/
 }
 
 /* Custom */
@@ -13,6 +22,7 @@ body * {
   padding-left: 8.5rem;
   padding-right: 8.5rem;
 }
+
 /* Dynamic () */
 @media (max-width: 1280px) {
   .tov-px {
@@ -20,18 +30,21 @@ body * {
     padding-right: 8rem;
   }
 }
+
 @media (max-width: 1024px) {
   .tov-px {
     padding-left: 7.5rem;
     padding-right: 7.5rem;
   }
 }
+
 @media (max-width: 768px) {
   .tov-px {
     padding-left: 7rem;
     padding-right: 7rem;
   }
 }
+
 @media (max-width: 526px) {
   .tov-px {
     padding-left: 2.75rem;
@@ -51,11 +64,13 @@ body * {
   text-align: center;
   width: 33.333%;
 }
+
 .tov-card-form {
   flex-wrap: wrap;
   justify-content: center;
   margin: -1.75rem -1.375rem;
 }
+
 .tov-card .icon,
 .tov-card-lg .icon {
   display: inline-block;
@@ -63,6 +78,7 @@ body * {
   margin-bottom: 1.75rem;
   width: 5rem;
 }
+
 .tov-card .subject,
 .tov-card-lg .subject {
   color: #333333;
@@ -71,12 +87,14 @@ body * {
   font-weight: 700;
   margin-bottom: 1.25rem;
 }
+
 .tov-card .description,
 .tov-card-lg .description {
   color: #6F6F6F;
   font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
   font-size: 1.125rem;
 }
+
 @media (max-width: 1280px) {
   .tov-card-lg.exi {
     flex: 50%;
@@ -84,18 +102,21 @@ body * {
     width: 50%;
   }
 }
+
 @media (max-width: 1024px) {
   .tov-card {
     flex: 50%;
     max-width: 50%;
     width: 50%;
   }
+
   .tov-card-lg {
     flex: 50%;
     max-width: 50%;
     width: 50%;
   }
 }
+
 @media (max-width: 924px) {
   .tov-card-lg.exi {
     flex: 100%;
@@ -103,6 +124,7 @@ body * {
     width: 100%;
   }
 }
+
 @media (max-width: 768px) {
   .tov-card {
     flex: 100%;
@@ -110,14 +132,17 @@ body * {
     width: 100%;
   }
 }
+
 @media (max-width: 526px) {
   .tov-card .icon {
     margin-bottom: 1.5rem;
   }
+
   .tov-card .subject {
     font-size: 1.375rem;
     margin-bottom: 1.125rem;
   }
+
   .tov-card .description {
     font-size: 1rem;
   }
@@ -131,12 +156,15 @@ body * {
   font-weight: 700;
   text-align: center;
 }
+
 .tov-comment.left {
   text-align: left;
 }
+
 .tov-comment.right {
   text-align: right;
 }
+
 .tov-comment-button {
   border: 1px solid #274F9D;
   border-radius: 0.5rem;
@@ -148,40 +176,55 @@ body * {
   padding: 0.75rem 1.375rem;
   text-align: center;
 }
+
+.tov-comment-button:hover {
+  color: white;
+  background-color: #274F9D;
+
+}
+
 .tov-comment-form {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 @media (max-width: 1024px) {
   .tov-comment {
     font-size: 2.125rem;
   }
+
   .tov-comment.left,
   .tov-comment.right {
     text-align: center;
   }
+
   .tov-comment-form {
     flex-direction: column;
   }
-  .tov-comment-form > .tov-comment {
+
+  .tov-comment-form>.tov-comment {
     margin-bottom: 1.25rem;
   }
 }
+
 @media (max-width: 768px) {
   .tov-comment {
     font-size: 2rem;
   }
-  .tov-comment-form > .tov-comment {
+
+  .tov-comment-form>.tov-comment {
     margin-bottom: 1.125rem;
   }
 }
+
 @media (max-width: 526px) {
   .tov-comment-buttn {
     font-size: 0.875;
-    padding: 0.625rem 1.25rem; 
+    padding: 0.625rem 1.25rem;
   }
-  .tov-comment-form > .tov-comment {
+
+  .tov-comment-form>.tov-comment {
     margin-bottom: 0.875rem;
   }
 }
@@ -192,12 +235,14 @@ body * {
   padding-top: 11.25rem;
   width: 100%;
 }
+
 .tov-form-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.tov-form-content > .button {
+
+.tov-form-content>.button {
   border: 1px solid #274F9D;
   border-radius: 0.375rem;
   color: #274F9D;
@@ -208,42 +253,51 @@ body * {
   padding: 0.375rem 1.125rem;
   text-align: center;
 }
-.tov-form-content > .description {
+
+.tov-form-content>.description {
   color: #6F6F6F;
   font-family: 'Spoqa Han Sans Neo', sans-serif;
   font-size: 1.125rem;
 }
-.tov-form-content > .title {
+
+.tov-form-content .title {
   color: #041E53;
   font-family: 'Spoqa Han Sans Neo', sans-serif;
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 1.875rem;
 }
-.tov-form-content > .title.lang-en {
+
+.tov-form-content .title.lang-en {
   font-family: 'GmarketSans', sans-serif;
 }
-.tov-form-content > .title.pt-sm {
+
+.tov-form-content .title.pt-sm {
   margin-bottom: 1.25rem;
 }
-.tov-form-content > .title-point {
+
+.tov-form-content .title-point {
   color: #274F9D;
   font-family: 'GmarketSans', sans-serif;
   font-size: 1.125rem;
   margin-bottom: 0.25rem;
 }
+
 .tov-form-image {
   display: flex;
   max-width: 470px;
 }
+
 .tov-form-image-lg {
   display: flex;
   flex: 1;
 }
+
 .tov-form-video {
   display: flex;
   width: 512px;
 }
+
 /* Form header */
 .tov-form-header {
   align-items: center;
@@ -252,129 +306,162 @@ body * {
   margin-bottom: 5rem;
   text-align: center;
 }
-.tov-form-header > .line {
+
+.tov-form-header>.line {
   background-color: transparent;
   border-bottom: 2px solid #274F9D;
   margin-top: 2.25rem;
   width: 11rem;
 }
-.tov-form-header > .title {
+
+.tov-form-header>.title {
   color: #333333;
   font-family: 'Spoqa Han Sans Neo', sans-serif;
   font-size: 2.25rem;
   font-weight: 700;
 }
-.tov-form-header > .title-point {
+
+.tov-form-header>.title-point {
   color: #274F9D;
   font-family: 'GmarketSans', sans-serif;
   font-size: 1.125rem;
   margin-bottom: 0.25rem;
 }
+
 /* Form row */
 .tov-form-row {
   display: flex;
 }
+
 .tov-form-row-pt {
   padding-top: 11.25rem;
 }
+
 /* Dynamic (Form) */
 @media (max-width: 1280px) {
   .tov-flex-col-lg {
     flex-direction: column;
   }
+
   .tov-form {
     padding-bottom: 10.625rem;
     padding-top: 10.625rem;
   }
+
   .tov-form-image-lg {
     max-width: 100%;
     width: 100%;
   }
+
   .tov-form-row-pt {
     padding-top: 10.625rem;
   }
 }
+
 @media (max-width: 1024px) {
   .tov-flex-col {
     flex-direction: column;
   }
+
   .tov-flex-col-reverse {
     flex-direction: column-reverse;
   }
+
   .tov-form {
     padding-bottom: 8.5rem;
     padding-top: 8.5rem;
   }
+
   .tov-form-content {
     max-width: 100%;
     width: 100%;
   }
+
   .tov-form-image {
     max-width: 100%;
     width: 100%;
   }
+
   .tov-form-row-pt {
     padding-top: 8.5rem;
   }
+
   .tov-form-video {
     max-width: 100%;
     width: 100%;
   }
 }
+
 @media (max-width: 768px) {
   .tov-form {
     padding-bottom: 6.875rem;
     padding-top: 6.875rem;
   }
-  .tov-form-content > .title-point {
+
+  .tov-form-content .title-point {
     font-size: 1.063rem;
   }
-  .tov-form-content > .title {
+
+  .tov-form-content .title {
     font-size: 1.75rem;
     margin-bottom: 1.8rem;
   }
-  .tov-form-header > .line {
+
+  .tov-form-header .line {
     margin-top: 2.125rem;
     width: 10.25rem;
   }
-  .tov-form-header > .title {
-    font-size: 2.125rem;
+
+  .tov-form-header>.title {
+    font-size: 1.75rem;
   }
-  .tov-form-header > .title-point {
+
+  .tov-form-header>.title-point {
     font-size: 1.063rem;
   }
+
   .tov-form-row-pt {
     padding-top: 6.875rem;
   }
 }
+
 @media (max-width: 526px) {
   .tov-form {
     padding-bottom: 4rem;
     padding-top: 4rem;
   }
-  .tov-form-content > .description {
+
+  .tov-form-content .description {
     font-size: 1rem;
   }
-  .tov-form-content > .title-point {
-    font-size: 1rem;
+
+  .tov-form-content .title-point {
+    font-size: 0.75rem;
   }
-  .tov-form-content > .title {
-    font-size: 1.625rem;
-    margin-bottom: 1.625rem;
+
+  .tov-form-content .title {
+    /* font-size: 1.5rem; */
+    font-size: 1.375rem;
+    margin-bottom: 1.5rem;
   }
+
   .tov-form-header {
     margin-bottom: 3.875rem;
   }
-  .tov-form-header > .line {
+
+  .tov-form-header>.line {
     margin-top: 1.875rem;
     width: 8rem;
   }
-  .tov-form-header > .title {
-    font-size: 2rem;
+
+  .tov-form-header>.title {
+    font-size: 1.625rem;
   }
-  .tov-form-header > .title-point {
+
+  .tov-form-header>.title-point {
     font-size: 1rem;
   }
+
   .tov-form-row-pt {
     padding-top: 4rem;
   }
@@ -387,19 +474,23 @@ body * {
   object-fit: contain;
   position: relative;
 }
+
 .tov-hero-content {
   color: #FFFFFF;
   padding-bottom: 8.875rem;
   padding-top: calc(5rem + 8.875rem);
 }
-.tov-hero-content > .sub-title {
+
+.tov-hero-content>.sub-title {
   font-size: 1.125rem;
   margin-bottom: 0.625rem;
 }
-.tov-hero-content > .title {
+
+.tov-hero-content>.title {
   font-size: 3rem;
   font-weight: 700;
 }
+
 /* Dynamic (Hero) */
 @media (max-width: 1280px) {
   .tov-hero-content {
@@ -407,30 +498,40 @@ body * {
     padding-top: calc(5rem + 7.125rem);
   }
 }
+
 @media (max-width: 1024px) {
   .tov-hero-content {
     padding-bottom: 6.875rem;
     padding-top: calc(5rem + 6.5rem);
   }
-  .tov-hero-content > .title {
+
+  .tov-hero-content>.title {
     font-size: 2.75rem;
   }
 }
+
 @media (max-width: 768px) {
   .tov-hero-content {
     padding-bottom: 5.75rem;
     padding-top: calc(5rem + 5.5rem);
   }
-  .tov-hero-content > .title {
-    font-size: 2.5rem;
+
+  .tov-hero-content>.title {
+    font-size: 1.75rem;
   }
 }
+
 @media (max-width: 526px) {
   .tov-hero-content {
     padding-bottom: 3.25rem;
     padding-top: calc(5rem + 2.875rem);
   }
-  .tov-hero-content > .title {
-    font-size: 2rem;
+
+  .tov-hero-content>.title {
+    font-size: 1.25rem;
+  }
+
+  .tov-hero-content>.sub-title {
+    font-size: 0.75rem;
   }
 }
